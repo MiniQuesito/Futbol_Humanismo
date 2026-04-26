@@ -9,13 +9,12 @@
 :root{--sky:#5c94fc;--grass-dark:#1a7a1a;--grass-light:#28a428;--yellow:#f0c040;--btn-green:#2a7a2a;--btn-green-h:#3a9a3a;--heart-red:#e03030}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'Press Start 2P',monospace;background:#000;display:flex;align-items:center;justify-content:center;height:500px;overflow:hidden}
-.screen{width:800px;height:600px;position:relative;overflow:hidden;display:none;flex-shrink:0}
+.screen{width:640px;height:480px;position:relative;overflow:hidden;display:none;flex-shrink:0}
 .screen.active{display:block}
-.bg-sky{position:absolute;inset:0;background:linear-gradient(180deg,var(--sky) 0%,var(--sky) 70%,#1a7a1a 70%)}
-.grass-stripes{position:absolute;bottom:0;left:0;right:0;height:220px;background:repeating-linear-gradient(90deg,#1a7a1a 0px,#1a7a1a 40px,#28a428 40px,#28a428 80px)}
-
+.bg-sky{position:absolute;inset:0;background:linear-gradient(180deg,var(--sky) 0%,var(--sky) 62%,#1a7a1a 62%)}
+.grass-stripes{position:absolute;bottom:0;left:0;right:0;height:180px;background:repeating-linear-gradient(90deg,#1a7a1a 0px,#1a7a1a 40px,#28a428 40px,#28a428 80px)}
 /* Estadios */
-.stad{position:absolute;bottom:215px;width:130px;height:100px;background:#888;border-top:5px solid #666}
+.stad{position:absolute;bottom:175px;width:130px;height:100px;background:#888;border-top:5px solid #666}
 .stad.l{left:0}.stad.r{right:0}
 .stad-seats{width:100%;height:72px;background:repeating-linear-gradient(0deg,#c44 0px,#c44 6px,#44c 6px,#44c 12px,#4c4 12px,#4c4 18px,#cc4 18px,#cc4 24px);opacity:.8}
 .stad-flag{position:absolute;top:-16px;width:7px;height:16px;background:#888}
@@ -25,7 +24,7 @@ body{font-family:'Press Start 2P',monospace;background:#000;display:flex;align-i
 .cloud{position:absolute;background:white}
 /* Jugador pixel */
 .player{position:absolute;width:56px;height:80px}
-.player.left{bottom:180px;left:140px}.player.right{bottom:180px;right:140px;transform:scaleX(-1)}
+.player.left{bottom:140px;left:140px}.player.right{bottom:140px;right:140px;transform:scaleX(-1)}
 .px{width:56px;height:80px;position:relative}
 .px-head{position:absolute;top:0;left:12px;width:32px;height:24px;background:#f5c090;border:3px solid #000}
 .px-hair{position:absolute;top:0;left:0;width:32px;height:10px;background:#1a1a1a}
@@ -50,7 +49,7 @@ body{font-family:'Press Start 2P',monospace;background:#000;display:flex;align-i
 /* Árbol */
 .tree{position:absolute}.tree-trunk{width:11px;height:18px;background:#8B4513;margin:0 auto}.tree-top{width:38px;height:38px;background:#2d8a2d;position:relative;left:-14px}
 /* Arco */
-.px-goal{position:absolute;bottom:180px;right:56px;width:78px;height:62px;border:6px solid white;border-bottom:none}
+.px-goal{position:absolute;bottom:140px;right:56px;width:78px;height:62px;border:6px solid white;border-bottom:none}
 .px-goal-net{position:absolute;inset:0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.3) 0,rgba(255,255,255,.3) 1px,transparent 1px,transparent 10px),repeating-linear-gradient(0deg,rgba(255,255,255,.3) 0,rgba(255,255,255,.3) 1px,transparent 1px,transparent 10px)}
 /* Menú inicio */
 .menu-box{position:absolute;top:50%;left:50%;transform:translate(-50%,-42%);background:rgba(0,0,0,.88);border:4px solid #555;padding:14px 28px;min-width:210px}
@@ -90,9 +89,9 @@ body{font-family:'Press Start 2P',monospace;background:#000;display:flex;align-i
 .force-track{width:100%;height:13px;background:#111;border:3px solid #555;overflow:hidden}
 .force-fill{height:100%;background:linear-gradient(90deg,#e03030 0%,#e07030 40%,#e0c030 70%,#e0e030 100%);width:0%;transition:width .04s linear}
 /* Balón juego */
-.game-ball{position:absolute;bottom:194px;left:176px;width:22px;height:22px}
+.game-ball{position:absolute;bottom:154px;left:176px;width:22px;height:22px}
 .game-ball.shoot{animation:shoot .6s forwards}
-@keyframes shoot{to{left:650px;bottom:212px;transform:scale(.45)}}
+@keyframes shoot{to{left:510px;bottom:172px;transform:scale(.45)}}
 /* Animación jugador */
 @keyframes run{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
 .running{animation:run .35s infinite}
